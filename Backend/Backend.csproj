@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="AccountService.cs" />
+    <Compile Include="CurrentAccount.cs" />
+    <Compile Include="Exceptions\AccountNotFoundException.cs" />
+    <Compile Include="Exceptions\WithdrawalAmountTooLargeException.cs" />
+    <Compile Include="IAccountService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SavingsAccount.cs" />
+    <Compile Include="SystemDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
