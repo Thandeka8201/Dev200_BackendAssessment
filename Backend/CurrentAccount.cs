@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace Backend
         {
             if (Balance + OverdraftLimit < amount)
             {
-                throw new Exception($"Cannot withdraw more than {Balance + OverdraftLimit}");
+                throw new WithdrawalAmountTooLargeException($"Cannot withdraw more than {Balance + OverdraftLimit}");
             }
             Balance -= amount;
         }

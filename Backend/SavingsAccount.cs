@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
@@ -23,7 +24,7 @@ namespace Backend
         {
             if (Balance - amount < MinimumBalance)
             {
-                throw new Exception($"Cannot withdraw more than {Balance - MinimumBalance}");
+                throw new WithdrawalAmountTooLargeException($"Cannot withdraw more than {Balance - MinimumBalance}");
             }
             Balance -= amount;
         }

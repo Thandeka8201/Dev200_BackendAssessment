@@ -25,5 +25,5 @@ namespace Backend
         }
 
         public abstract void Withdraw(int amount);
-    }
+    } 
 }
